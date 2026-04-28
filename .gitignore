@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Photos (don't commit product photos)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.MP.jpg
