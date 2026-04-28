@@ -10,25 +10,9 @@ An AI agent that manages your FB Marketplace Messenger conversations 24/7 — re
 
 ## How it works
 
-```
-Buyer messages you on FB Marketplace
-              ↓
-    Agent runs every hour
-              ↓
-  Opens your Messenger inbox
-              ↓
-  Reads and replies to every conversation
-              ↓
-┌─────────────────────────────────────────────┐
-│ Low interest (0-1 buyers)?                  │→ Engage, steer toward pickup
-│ High interest (2+ buyers)?                  │→ Respond, let THEM drive
-│ Item pending with another buyer?            │→ Leave on read (silent backup)
-│ Question not in item description?           │→ Escalate to you
-│ Buyer confirms a specific pickup time?      │→ Check calendar → book → share address
-└─────────────────────────────────────────────┘
-              ↓
-   Updates the buyer tracker with everything
-```
+<p align="center">
+  <img src="docs/how-it-works.svg" alt="Marketplace Autopilot flow diagram" width="680"/>
+</p>
 
 The agent is calm, direct, and never sounds desperate. It matches the buyer's energy — answering questions when they ask, only pushing toward scheduling when they're ready. It handles backup queues, ghost detection, confirmation nudges, and price negotiations automatically.
 

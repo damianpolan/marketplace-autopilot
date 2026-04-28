@@ -1,0 +1,92 @@
+<svg viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg" role="img" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <title>Marketplace Autopilot System Diagram</title>
+  <desc>Flow diagram showing how the automated agent processes buyer messages from Facebook Marketplace through to confirmed pickups</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Background for GitHub dark/light -->
+  <rect width="720" height="520" fill="#0d1117" rx="12"/>
+
+  <!-- Title -->
+  <text x="360" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#e6edf3">How Marketplace Autopilot Works</text>
+
+  <!-- Step 1: Buyer Messages -->
+  <rect x="255" y="52" width="210" height="44" rx="8" fill="#6366f1" opacity="0.15" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="360" y="72" text-anchor="middle" font-size="12" font-weight="600" fill="#a5b4fc">Buyer messages you</text>
+  <text x="360" y="86" text-anchor="middle" font-size="10" fill="#8b949e">on FB Marketplace</text>
+
+  <!-- Arrow 1 -->
+  <line x1="360" y1="96" x2="360" y2="118" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Agent Runs -->
+  <rect x="255" y="120" width="210" height="44" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#e6edf3">Agent runs hourly</text>
+  <text x="360" y="154" text-anchor="middle" font-size="10" fill="#8b949e">Cowork scheduled task</text>
+
+  <!-- Arrow 2 -->
+  <line x1="360" y1="164" x2="360" y2="188" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Reads Inbox -->
+  <rect x="255" y="190" width="210" height="44" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="210" text-anchor="middle" font-size="12" font-weight="600" fill="#e6edf3">Opens Messenger inbox</text>
+  <text x="360" y="224" text-anchor="middle" font-size="10" fill="#8b949e">Reads every conversation</text>
+
+  <!-- Arrow 3 -->
+  <line x1="360" y1="234" x2="360" y2="258" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Decision Box -->
+  <rect x="50" y="260" width="620" height="140" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="282" text-anchor="middle" font-size="11" font-weight="600" fill="#8b949e">FOR EACH CONVERSATION</text>
+
+  <!-- Branch 1: Low interest -->
+  <rect x="70" y="296" width="132" height="46" rx="6" fill="#6366f1" opacity="0.1" stroke="#6366f1" stroke-width="1"/>
+  <text x="136" y="314" text-anchor="middle" font-size="10" font-weight="600" fill="#a5b4fc">Low interest</text>
+  <text x="136" y="332" text-anchor="middle" font-size="9" fill="#8b949e">Steer toward pickup</text>
+
+  <!-- Branch 2: High interest -->
+  <rect x="218" y="296" width="132" height="46" rx="6" fill="#22c55e" opacity="0.1" stroke="#22c55e" stroke-width="1"/>
+  <text x="284" y="314" text-anchor="middle" font-size="10" font-weight="600" fill="#4ade80">High interest</text>
+  <text x="284" y="332" text-anchor="middle" font-size="9" fill="#8b949e">Let buyer drive</text>
+
+  <!-- Branch 3: Pending -->
+  <rect x="366" y="296" width="132" height="46" rx="6" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="1"/>
+  <text x="432" y="314" text-anchor="middle" font-size="10" font-weight="600" fill="#fbbf24">Item pending</text>
+  <text x="432" y="332" text-anchor="middle" font-size="9" fill="#8b949e">Leave on read</text>
+
+  <!-- Branch 4: Unknown -->
+  <rect x="514" y="296" width="138" height="46" rx="6" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="1"/>
+  <text x="583" y="314" text-anchor="middle" font-size="10" font-weight="600" fill="#f87171">Unknown question</text>
+  <text x="583" y="332" text-anchor="middle" font-size="9" fill="#8b949e">Escalate to you</text>
+
+  <!-- Converge -->
+  <text x="360" y="367" text-anchor="middle" font-size="10" fill="#8b949e">Buyer confirms a specific time?</text>
+  <text x="360" y="385" text-anchor="middle" font-size="12" fill="#8b949e">↓</text>
+
+  <!-- Arrow from decision box -->
+  <line x1="360" y1="400" x2="360" y2="418" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Bottom row -->
+  <rect x="60" y="420" width="170" height="44" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="145" y="440" text-anchor="middle" font-size="11" font-weight="600" fill="#e6edf3">Check calendar</text>
+  <text x="145" y="454" text-anchor="middle" font-size="9" fill="#8b949e">Find free 15-min slot</text>
+
+  <line x1="230" y1="442" x2="268" y2="442" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="275" y="420" width="170" height="44" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="440" text-anchor="middle" font-size="11" font-weight="600" fill="#e6edf3">Book pickup</text>
+  <text x="360" y="454" text-anchor="middle" font-size="9" fill="#8b949e">Calendar event + address</text>
+
+  <line x1="445" y1="442" x2="483" y2="442" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="490" y="420" width="170" height="44" rx="8" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="575" y="440" text-anchor="middle" font-size="11" font-weight="600" fill="#4ade80">Update tracker</text>
+  <text x="575" y="454" text-anchor="middle" font-size="9" fill="#8b949e">Log everything</text>
+
+  <!-- Footer -->
+  <text x="360" y="500" text-anchor="middle" font-size="10" fill="#6e7681">Repeats every hour, 8am–9pm  ·  Ghost check  ·  Confirmation nudges  ·  Price monitoring</text>
+
+</svg>
